@@ -7,8 +7,8 @@ Feature: As a potential client i need to open a calculator and do math operation
 
     Examples:
       | numero | operacion | numero2 | resultado |
-      | 7      | plus      | 8       | 15        |
+      | 75     | plus      | 10      | 85        |
       | 8      | minus     | 5       | 3         |
-      | 3      | multiply  | 3       | 9         |
+      | 3      | multiply  | 300     | 900       |
       | 8      | divide    | 2       | 4         |
 

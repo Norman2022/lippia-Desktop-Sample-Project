@@ -10,9 +10,27 @@ public class CalculatorService {
 	private CalculatorService() {}
 
 	public static void operacion(String num,String op, String num2) {
-    	ActionManager.click(CalculatorConstants.NUMERO, num);
+
+        if (num.length()==1){
+            ActionManager.click(CalculatorConstants.NUMERO, num);
+        }else{
+            for (int i=0;i<num.length();i++){
+                ActionManager.click(CalculatorConstants.NUMERO, String.valueOf((num.charAt(i))));
+            }
+        }
+
+
     	ActionManager.click(CalculatorConstants.OPERACION, op);
-        ActionManager.click(CalculatorConstants.NUMERO,num2);
+
+
+        if (num2.length()==1){
+            ActionManager.click(CalculatorConstants.NUMERO, num2);
+        }else{
+            for (int i=0;i<num2.length();i++){
+                ActionManager.click(CalculatorConstants.NUMERO, String.valueOf((num2.charAt(i))));
+            }
+        }
+
         ActionManager.click(CalculatorConstants.EQUAL);
 
     }
