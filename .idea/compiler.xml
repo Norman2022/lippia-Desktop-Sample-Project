@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Lippia-desktop-example-project" />
+        <module name="lippia-desktop-sample" />
       </profile>
     </annotationProcessing>
   </component>

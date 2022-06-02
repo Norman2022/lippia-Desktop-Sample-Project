@@ -9,15 +9,16 @@ public class CalculatorService {
 
 	private CalculatorService() {}
 
-	public static void plus() {
-    	ActionManager.click(CalculatorConstants.SEVEN);
-    	ActionManager.click(CalculatorConstants.PLUS);
-        ActionManager.click(CalculatorConstants.EIGHT);
+	public static void operacion(String num,String op, String num2) {
+    	ActionManager.click(CalculatorConstants.NUMERO, num);
+    	ActionManager.click(CalculatorConstants.OPERACION, op);
+        ActionManager.click(CalculatorConstants.NUMERO,num2);
         ActionManager.click(CalculatorConstants.EQUAL);
+
     }
     
-    public static void result(){
-    	Assert.assertEquals(getResult(),"15");
+    public static void result(String resultado){
+    	Assert.assertEquals(getResult(),resultado);
     }
     
     public static String getResult() {
